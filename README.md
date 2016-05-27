@@ -87,7 +87,7 @@ The numbers at the right of links are the result of execute time with the same f
 (Updating)
 ## EFFECTS Comparsion
 ### Fade In Comparsion
-Live code at [https://jsfiddle.net/9rbqwub4/](https://jsfiddle.net/9rbqwub4/)
+Live code at [https://jsfiddle.net/dda467b1/1/](https://jsfiddle.net/dda467b1/1/)
 
 `Native JavScript` take about **11** milliseconds / `jQuery` take about **269** milliseconds.
 ##### `Native JavScript code`
@@ -115,7 +115,7 @@ fadeIn(el);
 $(el).fadeIn();
 ```
 ### Hide Comparsion
-Live code at [https://jsfiddle.net/ukogvqxd/](https://jsfiddle.net/ukogvqxd/)
+Live code at [https://jsfiddle.net/dda467b1/2/](https://jsfiddle.net/dda467b1/2/)
 `Native JavScript` take about **1.195** milliseconds / `jQuery` take about **28.484** milliseconds.
 ##### `Native JavScript code`
 ```js
@@ -126,7 +126,7 @@ el.style.display = 'none';
 $(el).hide();
 ```
 ### Show Comparsion
-Live code at [https://jsfiddle.net/ryxb5son/](https://jsfiddle.net/ryxb5son/)
+Live code at [https://jsfiddle.net/dda467b1/3/](https://jsfiddle.net/dda467b1/3/)
 `Native JavScript` take about **0.765** milliseconds / `jQuery` take about **25.179** milliseconds.
 ##### `Native JavScript code`
 ```js
@@ -138,7 +138,7 @@ $(el).show();
 ```
 ## ELEMENTS Comparsion
 ### Add Class Comparsion
-Live code at [https://jsfiddle.net/noa5oa5m/](https://jsfiddle.net/noa5oa5m/)
+Live code at [https://jsfiddle.net/dda467b1/4/](https://jsfiddle.net/dda467b1/4/)
 `Native JavScript` take about **0.764** milliseconds / `jQuery` take about **5.649** milliseconds.
 ##### `Native JavScript code`
 ```js
