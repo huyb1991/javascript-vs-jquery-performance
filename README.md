@@ -7,8 +7,8 @@ Performance comparsion of **`native JavaScript`** and **`jQuery (version 2.1.0)`
 * <a href="#request-comparsion">Request</a>
 
 ### Effects
-* <a href="#fade-in-comparsion">Fade In</a>
-* <a href="#hide-comparsion">Hide</a>
+* <a href="#fade-in-comparsion">Fade In</a> (JavaScript: 11 ms / jQuery: 269 ms)
+* <a href="#hide-comparsion">Hide</a> (JavaScript: 1.195 ms / jQuery: 28.484 ms)
 * <a href="#show-comparsion">Show</a>
 
 ### Elements
@@ -85,10 +85,11 @@ Performance comparsion of **`native JavaScript`** and **`jQuery (version 2.1.0)`
 (Updating)
 ## EFFECTS Comparsion
 ### Fade In Comparsion
-Live code at https://jsfiddle.net/9rbqwub4/
+Live code at [https://jsfiddle.net/9rbqwub4/](https://jsfiddle.net/9rbqwub4/)
 
-`Native JavScript` take about **11** milliseconds.
-```
+`Native JavScript` take about **11** milliseconds / `jQuery` take about **269** milliseconds.
+##### `Native JavScript code`
+```js
 function fadeIn(el) {
   el.style.opacity = 0;
 
@@ -107,12 +108,21 @@ function fadeIn(el) {
 
 fadeIn(el);
 ```
-`jQuery` take about **269** milliseconds.
+##### `jQuery code`
 ```
 $(el).fadeIn();
 ```
 ### Hide Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/ukogvqxd/](https://jsfiddle.net/ukogvqxd/)
+`Native JavScript` take about **1.195** milliseconds / `jQuery` take about **28.484** milliseconds.
+##### `Native JavScript code`
+```js
+el.style.display = 'none';
+```
+##### `jQuery code`
+```
+$(el).hide();
+```
 ### Show Comparsion
 (Updating)
 ## ELEMENTS Comparsion
