@@ -1,138 +1,213 @@
 # Performance Comparison of JavaScript and jQuery
-Performance comparsion of javaScript and jQuery follow [You might not need jquery](http://youmightnotneedjquery.com/).
-## AJAX
-### JSON
-(Updating)
-### Post
-(Updating)
-### Request
-(Updating)
-## EFFECTS
-### Fade In
-(Updating)
-### Hide
-(Updating)
-### Show
-(Updating)
-## ELEMENTS
-### Add Class
-(Updating)
-### After
-(Updating)
-### Append
-(Updating)
-### Before
-(Updating)
-### Children
-(Updating)
-### Clone
-(Updating)
-### Contains
-(Updating)
-### Contains Selector
-(Updating)
-### Each
-(Updating)
-### Empty
-(Updating)
-### Filter
-(Updating)
-### Find Children
-(Updating)
-### Find Elements
-(Updating)
-### Get Attributes
-(Updating)
-### Get Html
-(Updating)
-### Get Outer Html
-(Updating)
-### Get Style
-(Updating)
-### Get Text
-(Updating)
-### Has Class
-(Updating)
-### Matches
-(Updating)
-### Matches Selector
-(Updating)
-### Next
-(Updating)
-### Offset
-(Updating)
-### Offset Parent
-(Updating)
-### Outer Height
-(Updating)
-### Outer Height With Margin
-(Updating)
-### Outer Width
-(Updating)
-### Outer Width With Margin
-(Updating)
-### Parent
-(Updating)
-### Position
-(Updating)
-### Position Relative To Viewport
-(Updating)
-### Prepend
-(Updating)
-### Prev
-(Updating)
-### Remove
-(Updating)
-### Remove Class
-(Updating)
-### Replace From Html
-(Updating)
-### Set Attributes
-(Updating)
-### Set Html
-(Updating)
-### Set Style
-(Updating)
-### Set Text
-(Updating)
-### Siblings
-(Updating)
-### Toggle Class
-(Updating)
-## EVENTS
-### Off
-(Updating)
-### On
-(Updating)
-### Ready
-(Updating)
-### Trigger Custom
-(Updating)
-### Trigger Native
-(Updating)
-## UTILS
-### Bind
-(Updating)
-### Array Each
-(Updating)
-### Deep Extend
-(Updating)
-### Extend
-(Updating)
-### Index Of
-(Updating)
-### Is Array
-(Updating)
-### Map
-(Updating)
-### Now
-(Updating)
-### Parse Html
-(Updating)
-### Parse Json
-(Updating)
-### Trim
-(Updating)
-### Type
-(Updating)
+Performance comparsion of **`native JavaScript`** and **`jQuery (version 2.1.0)`** follow [You might not need jquery](http://youmightnotneedjquery.com/) with **1,000 loops**.
+## Index
+### Ajax
+* <a href="#json-comparsion">JSON</a>
+* <a href="#post-comparsion">Post</a>
+* <a href="#request-comparsion">Request</a>
 
+### Effects
+* <a href="#fade-in-comparsion">Fade In</a>
+* <a href="#hide-comparsion">Hide</a>
+* <a href="#show-comparsion">Show</a>
+
+### Elements
+* <a href="#add-class-comparsion">Add Class</a>
+* <a href="#after-comparsion">After</a>
+* <a href="#append-comparsion">Append</a>
+* <a href="#before-comparsion">Before</a>
+* <a href="#children-comparsion">Children</a>
+* <a href="#clone-comparsion">Clone</a>
+* <a href="#contains-comparsion">Contains</a>
+* <a href="#contains-selector-comparsion">Contains Selector</a>
+* <a href="#each-comparsion">Each</a>
+* <a href="#empty-comparsion">Empty</a>
+* <a href="#filter-comparsion">Filter</a>
+* <a href="#find-children-comparsion">Find Children</a>
+* <a href="#find-elements-comparsion">Find Elements</a>
+* <a href="#get-attributes-comparsion">Get Attributes</a>
+* <a href="#get-html-comparsion">Get Html</a>
+* <a href="#get-outer-html-comparsion">Get Outer Html</a>
+* <a href="#get-style-comparsion">Get Style</a>
+* <a href="#get-text-comparsion">Get Text</a>
+* <a href="#has-class-comparsion">Has Class</a>
+* <a href="#matches-comparsion">Matches</a>
+* <a href="#matches-selector-comparsion">Matches Selector</a>
+* <a href="#next-comparsion">Next</a>
+* <a href="#offset-comparsion">Offset</a>
+* <a href="#offset-parent-comparsion">Offset Parent</a>
+* <a href="#outer-height-comparsion">Outer Height</a>
+* <a href="#outer-height-with-margin-comparsion">Outer Height With Margin</a>
+* <a href="#outer-width-comparsion">Outer Width</a>
+* <a href="#outer-width-with-margin-comparsion">Outer Width With Margin</a>
+* <a href="#parent-comparsion">Parent</a>
+* <a href="#position-comparsion">Position</a>
+* <a href="#position-relative-to-viewport-comparsion">Position Relative To Viewport</a>
+* <a href="#prepend-comparsion">Prepend</a>
+* <a href="#prev-comparsion">Prev</a>
+* <a href="#remove-comparsion">Remove</a>
+* <a href="#remove-class-comparsion">Remove Class</a>
+* <a href="#replace-from-html-comparsion">Replace From Html</a>
+* <a href="#set-attributes-comparsion">Set Attributes</a>
+* <a href="#set-html-comparsion">Set Html</a>
+* <a href="#set-style-comparsion">Set Style</a>
+* <a href="#set-text-comparsion">Set Text</a>
+* <a href="#siblings-comparsion">Siblings</a>
+* <a href="#toggle-class-comparsion">Toggle Class</a>
+
+### Events
+* <a href="#off-comparsion">Off</a>
+* <a href="#on-comparsion">On</a>
+* <a href="#ready-comparsion">Ready</a>
+* <a href="#trigger-custom-comparsion">Trigger Custom</a>
+* <a href="#trigger-native-comparsion">Trigger Native</a>
+
+### Utils
+* <a href="#bind-comparsion">Bind</a>
+* <a href="#array-each-comparsion">Array Each</a>
+* <a href="#deep-extend-comparsion">Deep Extend</a>
+* <a href="#extend-comparsion">Extend</a>
+* <a href="#index-of-comparsion">Index Of</a>
+* <a href="#is-array-comparsion">Is Array</a>
+* <a href="#map-comparsion">Map</a>
+* <a href="#now-comparsion">Now</a>
+* <a href="#parse-html-comparsion">Parse Html</a>
+* <a href="#parse-json-comparsion">Parse Json</a>
+* <a href="#trim-comparsion">Trim</a>
+* <a href="#type-comparsion">Type</a>
+
+## AJAX Comparsion
+### JSON Comparsion
+(Updating)
+### Post Comparsion
+(Updating)
+### Request Comparsion
+(Updating)
+## EFFECTS Comparsion
+### Fade In Comparsion
+(Updating)
+### Hide Comparsion
+(Updating)
+### Show Comparsion
+(Updating)
+## ELEMENTS Comparsion
+### Add Class Comparsion
+(Updating)
+### After Comparsion
+(Updating)
+### Append Comparsion
+(Updating)
+### Before Comparsion
+(Updating)
+### Children Comparsion
+(Updating)
+### Clone Comparsion
+(Updating)
+### Contains Comparsion
+(Updating)
+### Contains Selector Comparsion
+(Updating)
+### Each Comparsion
+(Updating)
+### Empty Comparsion
+(Updating)
+### Filter Comparsion
+(Updating)
+### Find Children Comparsion
+(Updating)
+### Find Elements Comparsion
+(Updating)
+### Get Attributes Comparsion
+(Updating)
+### Get Html Comparsion
+(Updating)
+### Get Outer Html Comparsion
+(Updating)
+### Get Style Comparsion
+(Updating)
+### Get Text Comparsion
+(Updating)
+### Has Class Comparsion
+(Updating)
+### Matches Comparsion
+(Updating)
+### Matches Selector Comparsion
+(Updating)
+### Next Comparsion
+(Updating)
+### Offset Comparsion
+(Updating)
+### Offset Parent Comparsion
+(Updating)
+### Outer Height Comparsion
+(Updating)
+### Outer Height With Margin Comparsion
+(Updating)
+### Outer Width Comparsion
+(Updating)
+### Outer Width With Margin Comparsion
+(Updating)
+### Parent Comparsion
+(Updating)
+### Position Comparsion
+(Updating)
+### Position Relative To Viewport Comparsion
+(Updating)
+### Prepend Comparsion
+(Updating)
+### Prev Comparsion
+(Updating)
+### Remove Comparsion
+(Updating)
+### Remove Class Comparsion
+(Updating)
+### Replace From Html Comparsion
+(Updating)
+### Set Attributes Comparsion
+(Updating)
+### Set Html Comparsion
+(Updating)
+### Set Style Comparsion
+(Updating)
+### Set Text Comparsion
+(Updating)
+### Siblings Comparsion
+(Updating)
+### Toggle Class Comparsion
+(Updating)
+## EVENTS Comparsion
+### Off Comparsion
+(Updating)
+### On Comparsion
+(Updating)
+### Ready Comparsion
+(Updating)
+### Trigger Custom Comparsion
+(Updating)
+### Trigger Native Comparsion
+(Updating)
+## UTILS Comparsion
+### Bind Comparsion
+(Updating)
+### Array Each Comparsion
+(Updating)
+### Deep Extend Comparsion
+(Updating)
+### Extend Comparsion
+(Updating)
+### Index Of Comparsion
+(Updating)
+### Is Array Comparsion
+(Updating)
+### Map Comparsion
+(Updating)
+### Now Comparsion
+(Updating)
+### Parse Html Comparsion
+(Updating)
+### Parse Json Comparsion
+(Updating)
+### Trim Comparsion
+(Updating)
+### Type Comparsion
+(Updating)
