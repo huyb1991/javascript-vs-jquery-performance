@@ -10,8 +10,8 @@ The numbers at the right of links are the result of execute time with the same f
 
 ### Effects
 * <a href="#fade-in-comparsion">Fade In</a> (11 ms / 269 ms)
-* <a href="#hide-comparsion">Hide</a> (1.195 ms / jQuery: 28.484 ms)
-* <a href="#show-comparsion">Show</a>
+* <a href="#hide-comparsion">Hide</a> (1.195 ms / 28.484 ms)
+* <a href="#show-comparsion">Show</a> (0.765 ms / 5.179 ms)
 
 ### Elements
 * <a href="#add-class-comparsion">Add Class</a>
@@ -126,7 +126,16 @@ el.style.display = 'none';
 $(el).hide();
 ```
 ### Show Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/ryxb5son/](https://jsfiddle.net/ryxb5son/)
+`Native JavScript` take about **0.765** milliseconds / `jQuery` take about **25.179** milliseconds.
+##### `Native JavScript code`
+```js
+el.style.display = ''
+```
+##### `jQuery code`
+```
+$(el).show();
+```
 ## ELEMENTS Comparsion
 ### Add Class Comparsion
 (Updating)
