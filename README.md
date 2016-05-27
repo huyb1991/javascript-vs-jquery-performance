@@ -85,7 +85,32 @@ Performance comparsion of **`native JavaScript`** and **`jQuery (version 2.1.0)`
 (Updating)
 ## EFFECTS Comparsion
 ### Fade In Comparsion
-(Updating)
+Live code at https://jsfiddle.net/9rbqwub4/
+
+`Native JavScript` take about **11** milliseconds.
+```
+function fadeIn(el) {
+  el.style.opacity = 0;
+
+  var last = +new Date(),
+  var tick = function() {
+    el.style.opacity = +el.style.opacity + (new Date() - last) / 400;
+    last = +new Date();
+
+    if (+el.style.opacity < 1) {
+      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+    }
+  };
+
+  tick();
+}
+
+fadeIn(el);
+```
+`jQuery` take about **269** milliseconds.
+```
+$(el).fadeIn();
+```
 ### Hide Comparsion
 (Updating)
 ### Show Comparsion
