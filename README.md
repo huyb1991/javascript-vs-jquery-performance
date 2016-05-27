@@ -14,7 +14,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#show-comparsion">Show</a> (0.765 ms / 5.179 ms)
 
 ### Elements
-* <a href="#add-class-comparsion">Add Class</a>
+* <a href="#add-class-comparsion">Add Class</a> (0.740 ms / 5.649 ms)
 * <a href="#after-comparsion">After</a>
 * <a href="#append-comparsion">Append</a>
 * <a href="#before-comparsion">Before</a>
@@ -138,7 +138,19 @@ $(el).show();
 ```
 ## ELEMENTS Comparsion
 ### Add Class Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/noa5oa5m/](https://jsfiddle.net/noa5oa5m/)
+`Native JavScript` take about **0.764** milliseconds / `jQuery` take about **5.649** milliseconds.
+##### `Native JavScript code`
+```js
+if (el.classList)
+  el.classList.add(className);
+else
+  el.className += ' ' + className;
+```
+##### `jQuery code`
+```
+$(el).addClass(className);
+```
 ### After Comparsion
 (Updating)
 ### Append Comparsion
