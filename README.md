@@ -17,7 +17,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#add-class-comparsion">Add Class</a> (0.740 ms / 5.649 ms)
 * <a href="#after-comparsion">After</a> (3.569 ms / 45.005 ms)
 * <a href="#append-comparsion">Append</a> (0.650 ms / 62.530 ms)
-* <a href="#before-comparsion">Before</a>
+* <a href="#before-comparsion">Before</a> (3.225 ms / 27.440 ms)
 * <a href="#children-comparsion">Children</a>
 * <a href="#clone-comparsion">Clone</a>
 * <a href="#contains-comparsion">Contains</a>
@@ -116,6 +116,7 @@ $(el).fadeIn();
 ```
 ### Hide Comparsion
 Live code at [https://jsfiddle.net/dda467b1/2/](https://jsfiddle.net/dda467b1/2/)
+
 `Native JavScript` take about **1.195** milliseconds / `jQuery` take about **28.484** milliseconds.
 ##### `Native JavScript code`
 ```js
@@ -127,6 +128,7 @@ $(el).hide();
 ```
 ### Show Comparsion
 Live code at [https://jsfiddle.net/dda467b1/3/](https://jsfiddle.net/dda467b1/3/)
+
 `Native JavScript` take about **0.765** milliseconds / `jQuery` take about **25.179** milliseconds.
 ##### `Native JavScript code`
 ```js
@@ -139,6 +141,7 @@ $(el).show();
 ## ELEMENTS Comparsion
 ### Add Class Comparsion
 Live code at [https://jsfiddle.net/dda467b1/4/](https://jsfiddle.net/dda467b1/4/)
+
 `Native JavScript` take about **0.764** milliseconds / `jQuery` take about **5.649** milliseconds.
 ##### `Native JavScript code`
 ```js
@@ -153,6 +156,7 @@ $(el).addClass(className);
 ```
 ### After Comparsion
 Live code at [https://jsfiddle.net/dda467b1/5/](https://jsfiddle.net/dda467b1/5/)
+
 `Native JavScript` take about **3.569** milliseconds / `jQuery` take about **45.005** milliseconds.
 ##### `Native JavScript code`
 ```js
@@ -164,6 +168,7 @@ $(el).after(htmlString);
 ```
 ### Append Comparsion
 Live code at [https://jsfiddle.net/dda467b1/6/](https://jsfiddle.net/dda467b1/6/)
+
 `Native JavScript` take about **0.650** milliseconds / `jQuery` take about **62.530** milliseconds.
 ##### `Native JavScript code`
 ```js
@@ -174,7 +179,17 @@ parent.appendChild(el);
 $(parent).append(el);
 ```
 ### Before Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/7/](https://jsfiddle.net/dda467b1/7/)
+
+`Native JavScript` take about **3.225** milliseconds / `jQuery` take about **27.440** milliseconds.
+##### `Native JavScript code`
+```js
+el.insertAdjacentHTML('beforebegin', htmlString);
+```
+##### `jQuery code`
+```
+$(el).before(htmlString);
+```
 ### Children Comparsion
 (Updating)
 ### Clone Comparsion
