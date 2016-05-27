@@ -18,7 +18,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#after-comparsion">After</a> (3.569 ms / 45.005 ms)
 * <a href="#append-comparsion">Append</a> (0.650 ms / 62.530 ms)
 * <a href="#before-comparsion">Before</a> (3.225 ms / 27.440 ms)
-* <a href="#children-comparsion">Children</a>
+* <a href="#children-comparsion">Children</a> (0.279 ms / 7.029 ms)
 * <a href="#clone-comparsion">Clone</a>
 * <a href="#contains-comparsion">Contains</a>
 * <a href="#contains-selector-comparsion">Contains Selector</a>
@@ -191,7 +191,17 @@ el.insertAdjacentHTML('beforebegin', htmlString);
 $(el).before(htmlString);
 ```
 ### Children Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/8/](https://jsfiddle.net/dda467b1/8/)
+
+`Native JavScript` take about **0.279** milliseconds / `jQuery` take about **7.029** milliseconds.
+##### `Native JavScript code`
+```js
+el.children
+```
+##### `jQuery code`
+```
+$(el).children();
+```
 ### Clone Comparsion
 (Updating)
 ### Contains Comparsion
