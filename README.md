@@ -1,5 +1,7 @@
 # Performance Comparison of JavaScript and jQuery
-Performance comparsion of **`native JavaScript`** and **`jQuery (version 2.1.0)`** follow [You might not need jquery](http://youmightnotneedjquery.com/) with **1,000 loops**.
+Performance comparsion of **`native JavaScript`** and **`jQuery (version 2.1.0)`** follow [You might not need jquery](http://youmightnotneedjquery.com/).
+
+The numbers at the right of links are the result of execute time with the same function for **1,000** loops of `Native JavaScript / jQuery`.
 ## Index
 ### Ajax
 * <a href="#json-comparsion">JSON</a>
@@ -7,8 +9,8 @@ Performance comparsion of **`native JavaScript`** and **`jQuery (version 2.1.0)`
 * <a href="#request-comparsion">Request</a>
 
 ### Effects
-* <a href="#fade-in-comparsion">Fade In</a> (JavaScript: 11 ms / jQuery: 269 ms)
-* <a href="#hide-comparsion">Hide</a> (JavaScript: 1.195 ms / jQuery: 28.484 ms)
+* <a href="#fade-in-comparsion">Fade In</a> (11 ms / 269 ms)
+* <a href="#hide-comparsion">Hide</a> (1.195 ms / jQuery: 28.484 ms)
 * <a href="#show-comparsion">Show</a>
 
 ### Elements
