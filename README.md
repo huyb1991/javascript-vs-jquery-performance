@@ -20,7 +20,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#before-comparsion">Before</a> (3.225 ms / 27.440 ms)
 * <a href="#children-comparsion">Children</a> (0.279 ms / 7.029 ms)
 * <a href="#clone-comparsion">Clone</a> (4.934 ms / 42.889 ms)
-* <a href="#contains-comparsion">Contains</a>
+* <a href="#contains-comparsion">Contains</a> (0.934 ms / 1.605 ms)
 * <a href="#contains-selector-comparsion">Contains Selector</a>
 * <a href="#each-comparsion">Each</a>
 * <a href="#empty-comparsion">Empty</a>
@@ -215,7 +215,17 @@ el.cloneNode(true);
 $(el).clone();
 ```
 ### Contains Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/11/](https://jsfiddle.net/dda467b1/11/)
+
+`Native JavScript` take about **0.934** milliseconds / `jQuery` take about **1.605** milliseconds.
+##### `Native JavScript code`
+```js
+el !== child && el.contains(child);
+```
+##### `jQuery code`
+```
+$.contains(el, child);
+```
 ### Contains Selector Comparsion
 (Updating)
 ### Each Comparsion
