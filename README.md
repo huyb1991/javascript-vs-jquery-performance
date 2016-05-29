@@ -25,7 +25,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#each-comparsion">Each</a> (4.120 ms / 8.220 ms)
 * <a href="#empty-comparsion">Empty</a> (1.969 ms / 3.639 ms)
 * <a href="#filter-comparsion">Filter</a> (2.709 ms / 9.860 ms)
-* <a href="#find-children-comparsion">Find Children</a>
+* <a href="#find-children-comparsion">Find Children</a> (0.949 ms / 5.404 ms)
 * <a href="#find-elements-comparsion">Find Elements</a>
 * <a href="#get-attributes-comparsion">Get Attributes</a>
 * <a href="#get-html-comparsion">Get Html</a>
@@ -280,7 +280,17 @@ Array.prototype.filter.call(document.querySelectorAll(selector), filterFn);
 $(selector).filter(filterFn);
 ```
 ### Find Children Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/16/](https://jsfiddle.net/dda467b1/16/)
+
+`Native JavScript` take about **0.949** milliseconds / `jQuery` take about **5.404** milliseconds.
+##### `Native JavScript code`
+```js
+el.querySelectorAll(selector);
+```
+##### `jQuery code`
+```
+$(el).find(selector);
+```
 ### Find Elements Comparsion
 (Updating)
 ### Get Attributes Comparsion
