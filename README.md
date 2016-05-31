@@ -35,7 +35,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#has-class-comparsion">Has Class</a> (0.480 ms / 2.689 ms)
 * <a href="#matches-comparsion">Matches</a> (0.345 ms / 6.534 ms)
 * <a href="#matches-selector-comparsion">Matches Selector</a> (0.460 ms / 8.185 ms)
-* <a href="#next-comparsion">Next</a>
+* <a href="#next-comparsion">Next</a> (0.215 ms / 1.130 ms)
 * <a href="#offset-comparsion">Offset</a>
 * <a href="#offset-parent-comparsion">Offset Parent</a>
 * <a href="#outer-height-comparsion">Outer Height</a>
@@ -407,7 +407,17 @@ matches(el, '.my-class');
 $(el).is('.my-class');
 ```
 ### Next Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/26/](https://jsfiddle.net/dda467b1/26/)
+
+`Native JavScript` take about **0.215** milliseconds / `jQuery` take about **1.130** milliseconds.
+##### `Native JavScript code`
+```js
+el.nextElementSibling
+```
+##### `jQuery code`
+```
+$(el).next();
+```
 ### Offset Comparsion
 (Updating)
 ### Offset Parent Comparsion
