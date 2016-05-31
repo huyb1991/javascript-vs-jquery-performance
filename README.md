@@ -73,7 +73,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#is-array-comparsion">Is Array</a> (0.299 ms / 0.349 ms)
 * <a href="#map-comparsion">Map</a> (3.484 ms / 2.774 ms)
 * <a href="#now-comparsion">Now</a> (0.280 ms / 0.150 ms)
-* <a href="#parse-html-comparsion">Parse Html</a>
+* <a href="#parse-html-comparsion">Parse Html</a> (61.830 ms / 67.510 ms)
 * <a href="#parse-json-comparsion">Parse Json</a>
 * <a href="#trim-comparsion">Trim</a>
 * <a href="#type-comparsion">Type</a>
@@ -904,7 +904,23 @@ Date.now();
 $.now();
 ```
 ### Parse Html Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/62/](https://jsfiddle.net/dda467b1/62/)
+
+`Native JavScript` take about **61.830** milliseconds / `jQuery` take about **67.510** milliseconds.
+##### `Native JavScript code`
+```js
+var parseHTML = function(str) {
+  var tmp = document.implementation.createHTMLDocument();
+  tmp.body.innerHTML = str;
+  return tmp.body.children;
+};
+
+parseHTML(htmlString);
+```
+##### `jQuery code`
+```
+$.parseHTML(htmlString
+```
 ### Parse Json Comparsion
 (Updating)
 ### Trim Comparsion
