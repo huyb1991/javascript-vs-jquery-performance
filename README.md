@@ -53,7 +53,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#set-attributes-comparsion">Set Attributes</a> (1.059 ms / 5.615 ms)
 * <a href="#set-html-comparsion">Set Html</a> (2.225 ms / 9.705 ms)
 * <a href="#set-style-comparsion">Set Style</a> (2.425 ms / 21.509 ms)
-* <a href="#set-text-comparsion">Set Text</a>
+* <a href="#set-text-comparsion">Set Text</a> (0.900 ms / 11.405 ms)
 * <a href="#siblings-comparsion">Siblings</a>
 * <a href="#toggle-class-comparsion">Toggle Class</a>
 
@@ -647,7 +647,18 @@ el.style.borderWidth = '20px';
 $(el).css('border-width', '20px');
 ```
 ### Set Text Comparsion
-(Updating)
+### Set Style Comparsion
+Live code at [https://jsfiddle.net/dda467b1/46/](https://jsfiddle.net/dda467b1/46/)
+
+`Native JavScript` take about **0.900** milliseconds / `jQuery` take about **11.405** milliseconds.
+##### `Native JavScript code`
+```js
+el.textContent = string;
+```
+##### `jQuery code`
+```
+$(el).text(string);
+```
 ### Siblings Comparsion
 (Updating)
 ### Toggle Class Comparsion
