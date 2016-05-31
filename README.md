@@ -31,7 +31,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#get-html-comparsion">Get Html</a> (0.555 ms / 6.339 ms)
 * <a href="#get-outer-html-comparsion">Get Outer Html</a> (0.714 ms / 269.639 ms)
 * <a href="#get-style-comparsion">Get Style</a> (1.424 ms / 11.745 ms)
-* <a href="#get-text-comparsion">Get Text</a>
+* <a href="#get-text-comparsion">Get Text</a> (0.320 ms / 2.470 ms)
 * <a href="#has-class-comparsion">Has Class</a>
 * <a href="#matches-comparsion">Matches</a>
 * <a href="#matches-selector-comparsion">Matches Selector</a>
@@ -352,7 +352,17 @@ getComputedStyle(el)[ruleName];
 $(el).css(ruleName);
 ```
 ### Get Text Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/22/](https://jsfiddle.net/dda467b1/22/)
+
+`Native JavScript` take about **0.320** milliseconds / `jQuery` take about **2.470** milliseconds.
+##### `Native JavScript code`
+```js
+el.textContent
+```
+##### `jQuery code`
+```
+$(el).text();
+```
 ### Has Class Comparsion
 (Updating)
 ### Matches Comparsion
