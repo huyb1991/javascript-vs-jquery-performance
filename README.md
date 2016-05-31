@@ -58,7 +58,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#toggle-class-comparsion">Toggle Class</a> (1.169 ms / 29.754 ms)
 
 ### Events
-* <a href="#off-comparsion">Off</a>
+* <a href="#off-comparsion">Off</a> (0.855 ms / 4.554 ms)
 * <a href="#on-comparsion">On</a>
 * <a href="#ready-comparsion">Ready</a>
 * <a href="#trigger-custom-comparsion">Trigger Custom</a>
@@ -699,7 +699,17 @@ $(el).toggleClass(className);
 ```
 ## EVENTS Comparsion
 ### Off Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/50/](https://jsfiddle.net/dda467b1/50/)
+
+`Native JavScript` take about **0.855** milliseconds / `jQuery` take about **4.554** milliseconds.
+##### `Native JavScript code`
+```js
+el.removeEventListener(eventName, eventHandler);
+```
+##### `jQuery code`
+```
+$(el).off(eventName, eventHandler);
+```
 ### On Comparsion
 (Updating)
 ### Ready Comparsion
