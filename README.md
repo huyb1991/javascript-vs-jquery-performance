@@ -36,7 +36,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#matches-comparsion">Matches</a> (0.345 ms / 6.534 ms)
 * <a href="#matches-selector-comparsion">Matches Selector</a> (0.460 ms / 8.185 ms)
 * <a href="#next-comparsion">Next</a> (0.215 ms / 1.130 ms)
-* <a href="#offset-comparsion">Offset</a>
+* <a href="#offset-comparsion">Offset</a> (2.470 ms / 7.034 ms)
 * <a href="#offset-parent-comparsion">Offset Parent</a>
 * <a href="#outer-height-comparsion">Outer Height</a>
 * <a href="#outer-height-with-margin-comparsion">Outer Height With Margin</a>
@@ -419,7 +419,17 @@ el.nextElementSibling
 $(el).next();
 ```
 ### Offset Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/28/](https://jsfiddle.net/dda467b1/28/)
+
+`Native JavScript` take about **2.470** milliseconds / `jQuery` take about **7.034** milliseconds.
+##### `Native JavScript code`
+```js
+var rect = el.getBoundingClientRect();
+```
+##### `jQuery code`
+```
+$(el).offset();
+```
 ### Offset Parent Comparsion
 (Updating)
 ### Outer Height Comparsion
