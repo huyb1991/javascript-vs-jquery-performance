@@ -6,7 +6,7 @@ The numbers at the right of links are the result of execute time with the same f
 ### Ajax
 * <a href="#json-comparsion">JSON</a> (1.039 ms / 11.025 ms)
 * <a href="#post-comparsion">Post</a> (5.765 ms / 17.940 ms)
-* <a href="#request-comparsion">Request</a>
+* <a href="#request-comparsion">Request</a> (2.095 ms / 12.439 ms)
 
 ### Effects
 * <a href="#fade-in-comparsion">Fade In</a> (11 ms / 269 ms)
@@ -129,7 +129,40 @@ $.ajax({
 });
 ```
 ### Request Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/71/](https://jsfiddle.net/dda467b1/71/)
+
+`Native JavScript` take about **2.095** milliseconds / `jQuery` take about **12.439** milliseconds.
+##### `Native JavScript code`
+```js
+var request = new XMLHttpRequest();
+request.open('GET', '/my/url', true);
+
+request.onload = function() {
+  if (request.status >= 200 && request.status < 400) {
+    // Success!
+    var resp = request.responseText;
+  } else {
+    // We reached our target server, but it returned an error
+  }
+};
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
+```
+##### `jQuery code`
+```
+$.ajax({
+  type: 'GET',
+  url: '/my/url',
+  success: function(resp) {
+  },
+  error: function() {
+  }
+});
+```
 ## EFFECTS Comparsion
 ### Fade In Comparsion
 Live code at [https://jsfiddle.net/dda467b1/1/](https://jsfiddle.net/dda467b1/1/)
