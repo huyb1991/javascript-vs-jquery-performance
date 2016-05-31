@@ -5,7 +5,7 @@ The numbers at the right of links are the result of execute time with the same f
 ## Index
 ### Ajax
 * <a href="#json-comparsion">JSON</a> (1.039 ms / 11.025 ms)
-* <a href="#post-comparsion">Post</a>
+* <a href="#post-comparsion">Post</a> (5.765 ms / 17.940 ms)
 * <a href="#request-comparsion">Request</a>
 
 ### Effects
@@ -110,7 +110,24 @@ $.getJSON('/my/url', function(data) {
 });
 ```
 ### Post Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/70/](https://jsfiddle.net/dda467b1/70/)
+
+`Native JavScript` take about **5.765** milliseconds / `jQuery` take about **17.940** milliseconds.
+##### `Native JavScript code`
+```js
+var request = new XMLHttpRequest();
+request.open('POST', '/my/url', true);
+request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+request.send(data);
+```
+##### `jQuery code`
+```
+$.ajax({
+  type: 'POST',
+  url: '/my/url',
+  data: data
+});
+```
 ### Request Comparsion
 (Updating)
 ## EFFECTS Comparsion
