@@ -32,7 +32,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#get-outer-html-comparsion">Get Outer Html</a> (0.714 ms / 269.639 ms)
 * <a href="#get-style-comparsion">Get Style</a> (1.424 ms / 11.745 ms)
 * <a href="#get-text-comparsion">Get Text</a> (0.320 ms / 2.470 ms)
-* <a href="#has-class-comparsion">Has Class</a>
+* <a href="#has-class-comparsion">Has Class</a> (0.480 ms / 2.689 ms)
 * <a href="#matches-comparsion">Matches</a>
 * <a href="#matches-selector-comparsion">Matches Selector</a>
 * <a href="#next-comparsion">Next</a>
@@ -364,7 +364,20 @@ el.textContent
 $(el).text();
 ```
 ### Has Class Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/23/](https://jsfiddle.net/dda467b1/23/)
+
+`Native JavScript` take about **0.480** milliseconds / `jQuery` take about **2.689** milliseconds.
+##### `Native JavScript code`
+```js
+if (el.classList)
+  el.classList.contains(className);
+else
+  new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+```
+##### `jQuery code`
+```
+$(el).hasClass(className);
+```
 ### Matches Comparsion
 (Updating)
 ### Matches Selector Comparsion
