@@ -45,7 +45,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#parent-comparsion">Parent</a> (0.230 ms / 4.860 ms)
 * <a href="#position-comparsion">Position</a> (1.019 ms / 77.925 ms)
 * <a href="#position-relative-to-viewport-comparsion">Position Relative To Viewport</a> (1.549 ms / 10.710 ms)
-* <a href="#prepend-comparsion">Prepend</a>
+* <a href="#prepend-comparsion">Prepend</a> (1.085 ms / 75.240 ms)
 * <a href="#prev-comparsion">Prev</a>
 * <a href="#remove-comparsion">Remove</a>
 * <a href="#remove-class-comparsion">Remove Class</a>
@@ -531,7 +531,7 @@ Live code at [https://jsfiddle.net/dda467b1/36/](https://jsfiddle.net/dda467b1/3
 $(el).position();
 ```
 ### Position Relative To Viewport Comparsion
-Live code at [https://jsfiddle.net/dda467b1/38/](https://jsfiddle.net/dda467b1/38/)
+Live code at [https://jsfiddle.net/dda467b1/37/](https://jsfiddle.net/dda467b1/37/)
 
 `Native JavScript` take about **1.549** milliseconds / `jQuery` take about **10.710** milliseconds.
 ##### `Native JavScript code`
@@ -548,7 +548,17 @@ var offset = el.offset();
 }
 ```
 ### Prepend Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/38/](https://jsfiddle.net/dda467b1/38/)
+
+`Native JavScript` take about **1.085** milliseconds / `jQuery` take about **75.240** milliseconds.
+##### `Native JavScript code`
+```js
+parent.insertBefore(el, parent.firstChild);
+```
+##### `jQuery code`
+```
+$(parent).prepend(el);
+```
 ### Prev Comparsion
 (Updating)
 ### Remove Comparsion
