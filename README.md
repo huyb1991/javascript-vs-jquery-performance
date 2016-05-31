@@ -4,7 +4,7 @@ Performance comparsion of **`native JavaScript`** and **`jQuery (version 2.1.0)`
 The numbers at the right of links are the result of execute time with the same function for **1,000** loops of `Native JavaScript / jQuery`.
 ## Index
 ### Ajax
-* <a href="#json-comparsion">JSON</a>
+* <a href="#json-comparsion">JSON</a> (1.039 ms / 11.025 ms)
 * <a href="#post-comparsion">Post</a>
 * <a href="#request-comparsion">Request</a>
 
@@ -80,7 +80,35 @@ The numbers at the right of links are the result of execute time with the same f
 
 ## AJAX Comparsion
 ### JSON Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/69/](https://jsfiddle.net/dda467b1/69/)
+
+`Native JavScript` take about **1.039** milliseconds / `jQuery` take about **11.025** milliseconds.
+##### `Native JavScript code`
+```js
+var request = new XMLHttpRequest();
+request.open('GET', '/my/url', true);
+
+request.onload = function() {
+  if (request.status >= 200 && request.status < 400) {
+    // Success!
+    var data = JSON.parse(request.responseText);
+  } else {
+    // We reached our target server, but it returned an error
+
+  }
+};
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
+```
+##### `jQuery code`
+```
+$.getJSON('/my/url', function(data) {
+});
+```
 ### Post Comparsion
 (Updating)
 ### Request Comparsion
