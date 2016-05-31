@@ -29,7 +29,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#find-elements-comparsion">Find Elements</a> (0.970 ms / 12.250 ms)
 * <a href="#get-attributes-comparsion">Get Attributes</a> (0.390 ms / 6.164 ms))
 * <a href="#get-html-comparsion">Get Html</a> (0.555 ms / 6.339 ms)
-* <a href="#get-outer-html-comparsion">Get Outer Html</a>
+* <a href="#get-outer-html-comparsion">Get Outer Html</a> (0.714 ms / 269.639 ms)
 * <a href="#get-style-comparsion">Get Style</a>
 * <a href="#get-text-comparsion">Get Text</a>
 * <a href="#has-class-comparsion">Has Class</a>
@@ -328,7 +328,17 @@ el.innerHTML;
 $(el).html();
 ```
 ### Get Outer Html Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/20/](https://jsfiddle.net/dda467b1/20/)
+
+`Native JavScript` take about **0.714** milliseconds / `jQuery` take about **269.639** milliseconds.
+##### `Native JavScript code`
+```js
+el.outerHTML;
+```
+##### `jQuery code`
+```
+$('<div>').append($(el).clone()).html();
+```
 ### Get Style Comparsion
 (Updating)
 ### Get Text Comparsion
