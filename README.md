@@ -61,7 +61,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#off-comparsion">Off</a> (0.855 ms / 4.554 ms)
 * <a href="#on-comparsion">On</a> (1.230 ms / 14.205 ms)
 * <a href="#ready-comparsion">Ready</a> (0.140 ms / 7.514 ms)
-* <a href="#trigger-custom-comparsion">Trigger Custom</a>
+* <a href="#trigger-custom-comparsion">Trigger Custom</a> (4.385 ms / 33.589 ms)
 * <a href="#trigger-native-comparsion">Trigger Native</a>
 
 ### Utils
@@ -742,7 +742,24 @@ $(document).ready(function(){
 });
 ```
 ### Trigger Custom Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/53/](https://jsfiddle.net/dda467b1/53/)
+
+`Native JavScript` take about **4.385** milliseconds / `jQuery` take about **33.589** milliseconds.
+##### `Native JavScript code`
+```js
+if (window.CustomEvent) {
+  var event = new CustomEvent('my-event', {detail: {some: 'data'}});
+} else {
+  var event = document.createEvent('CustomEvent');
+  event.initCustomEvent('my-event', true, true, {some: 'data'});
+}
+
+el.dispatchEvent(event);
+```
+##### `jQuery code`
+```
+$(el).trigger('my-event', {some: 'data'});
+```
 ### Trigger Native Comparsion
 (Updating)
 ## UTILS Comparsion
