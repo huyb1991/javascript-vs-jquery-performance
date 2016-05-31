@@ -50,7 +50,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#remove-comparsion">Remove</a> (0.404 ms / 2.105 ms)
 * <a href="#remove-class-comparsion">Remove Class</a> (0.615 ms / 5.480 ms)
 * <a href="#replace-from-html-comparsion">Replace From Html</a> (0.354 ms / 6.789 ms)
-* <a href="#set-attributes-comparsion">Set Attributes</a>
+* <a href="#set-attributes-comparsion">Set Attributes</a> (1.059 ms / 5.615 ms)
 * <a href="#set-html-comparsion">Set Html</a>
 * <a href="#set-style-comparsion">Set Style</a>
 * <a href="#set-text-comparsion">Set Text</a>
@@ -611,7 +611,17 @@ el.outerHTML = string;
 $(el).replaceWith(string);
 ```
 ### Set Attributes Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/43/](https://jsfiddle.net/dda467b1/43/)
+
+`Native JavScript` take about **1.059** milliseconds / `jQuery` take about **5.615** milliseconds.
+##### `Native JavScript code`
+```js
+el.setAttribute('tabindex', 3)
+```
+##### `jQuery code`
+```
+$(el).attr('tabindex', 3);
+```
 ### Set Html Comparsion
 (Updating)
 ### Set Style Comparsion
