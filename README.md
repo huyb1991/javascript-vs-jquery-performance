@@ -48,7 +48,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#prepend-comparsion">Prepend</a> (1.085 ms / 75.240 ms)
 * <a href="#prev-comparsion">Prev</a> (0.249 ms / 3.744 ms)
 * <a href="#remove-comparsion">Remove</a> (0.404 ms / 2.105 ms)
-* <a href="#remove-class-comparsion">Remove Class</a>
+* <a href="#remove-class-comparsion">Remove Class</a> (0.615 ms / 5.480 ms)
 * <a href="#replace-from-html-comparsion">Replace From Html</a>
 * <a href="#set-attributes-comparsion">Set Attributes</a>
 * <a href="#set-html-comparsion">Set Html</a>
@@ -584,7 +584,20 @@ el.parentNode.removeChild(el);
 $(el).remove();
 ```
 ### Remove Class Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/41/](https://jsfiddle.net/dda467b1/41/)
+
+`Native JavScript` take about **0.615** milliseconds / `jQuery` take about **5.480** milliseconds.
+##### `Native JavScript code`
+```js
+if (el.classList)
+  el.classList.remove(className);
+else
+  el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+```
+##### `jQuery code`
+```
+$(el).removeClass(className);
+```
 ### Replace From Html Comparsion
 (Updating)
 ### Set Attributes Comparsion
