@@ -66,7 +66,7 @@ The numbers at the right of links are the result of execute time with the same f
 
 ### Utils
 * <a href="#bind-comparsion">Bind</a>
-* <a href="#array-each-comparsion">Array Each</a>
+* <a href="#array-each-comparsion">Array Each</a> (0.575 ms / 1.094 ms)
 * <a href="#deep-extend-comparsion">Deep Extend</a>
 * <a href="#extend-comparsion">Extend</a>
 * <a href="#index-of-comparsion">Index Of</a>
@@ -778,7 +778,19 @@ $(el).trigger('change');
 ### Bind Comparsion
 (Updating)
 ### Array Each Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/55/](https://jsfiddle.net/dda467b1/55/)
+
+`Native JavScript` take about **0.575** milliseconds / `jQuery` take about **1.094** milliseconds.
+##### `Native JavScript code`
+```js
+array.forEach(function(item, i){
+});
+```
+##### `jQuery code`
+```
+$.each(array, function(i, item){
+});
+```
 ### Deep Extend Comparsion
 (Updating)
 ### Extend Comparsion
