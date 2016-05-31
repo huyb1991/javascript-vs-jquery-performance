@@ -47,7 +47,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#position-relative-to-viewport-comparsion">Position Relative To Viewport</a> (1.549 ms / 10.710 ms)
 * <a href="#prepend-comparsion">Prepend</a> (1.085 ms / 75.240 ms)
 * <a href="#prev-comparsion">Prev</a> (0.249 ms / 3.744 ms)
-* <a href="#remove-comparsion">Remove</a>
+* <a href="#remove-comparsion">Remove</a> (0.404 ms / 2.105 ms)
 * <a href="#remove-class-comparsion">Remove Class</a>
 * <a href="#replace-from-html-comparsion">Replace From Html</a>
 * <a href="#set-attributes-comparsion">Set Attributes</a>
@@ -572,7 +572,17 @@ el.previousElementSibling
 $(el).prev();
 ```
 ### Remove Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/40/](https://jsfiddle.net/dda467b1/40/)
+
+`Native JavScript` take about **0.404** milliseconds / `jQuery` take about **2.105** milliseconds.
+##### `Native JavScript code`
+```js
+el.parentNode.removeChild(el);
+```
+##### `jQuery code`
+```
+$(el).remove();
+```
 ### Remove Class Comparsion
 (Updating)
 ### Replace From Html Comparsion
