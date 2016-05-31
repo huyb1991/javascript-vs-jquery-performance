@@ -60,7 +60,7 @@ The numbers at the right of links are the result of execute time with the same f
 ### Events
 * <a href="#off-comparsion">Off</a> (0.855 ms / 4.554 ms)
 * <a href="#on-comparsion">On</a> (1.230 ms / 14.205 ms)
-* <a href="#ready-comparsion">Ready</a>
+* <a href="#ready-comparsion">Ready</a> (0.140 ms / 7.514 ms)
 * <a href="#trigger-custom-comparsion">Trigger Custom</a>
 * <a href="#trigger-native-comparsion">Trigger Native</a>
 
@@ -723,7 +723,24 @@ el.addEventListener(eventName, eventHandler);
 $(el).on(eventName, eventHandler);
 ```
 ### Ready Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/52/](https://jsfiddle.net/dda467b1/52/)
+
+`Native JavScript` take about **0.140** milliseconds / `jQuery` take about **7.514** milliseconds.
+##### `Native JavScript code`
+```js
+function ready(fn) {
+  if (document.readyState != 'loading'){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+```
+##### `jQuery code`
+```
+$(document).ready(function(){
+});
+```
 ### Trigger Custom Comparsion
 (Updating)
 ### Trigger Native Comparsion
