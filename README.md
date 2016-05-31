@@ -67,7 +67,7 @@ Ajax request only for 10 loops
 * <a href="#trigger-native-comparsion">Trigger Native</a> (3.375 ms / 24.730 ms)
 
 ### Utils
-* <a href="#bind-comparsion">Bind</a>
+* <a href="#bind-comparsion">Bind</a> (0.730 ms / 2.024 ms)
 * <a href="#array-each-comparsion">Array Each</a> (0.575 ms / 1.094 ms)
 * <a href="#deep-extend-comparsion">Deep Extend</a> (1.105 ms/ 2.869 ms)
 * <a href="#extend-comparsion">Extend</a> (0.674 ms / 2.084 ms)
@@ -856,7 +856,17 @@ $(el).trigger('change');
 ```
 ## UTILS Comparsion
 ### Bind Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/72/](https://jsfiddle.net/dda467b1/72/)
+
+`Native JavScript` take about **0.730** milliseconds / `jQuery` take about **2.024** milliseconds.
+##### `Native JavScript code`
+```js
+fn.bind(context);
+```
+##### `jQuery code`
+```
+$.proxy(fn, context);
+```
 ### Array Each Comparsion
 Live code at [https://jsfiddle.net/dda467b1/56/](https://jsfiddle.net/dda467b1/56/)
 
