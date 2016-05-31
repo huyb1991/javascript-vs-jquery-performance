@@ -43,7 +43,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#outer-width-comparsion">Outer Width</a> (3.125 ms / 19.805 ms)
 * <a href="#outer-width-with-margin-comparsion">Outer Width With Margin</a> (2.490 ms / 27.835 ms)
 * <a href="#parent-comparsion">Parent</a> (0.230 ms / 4.860 ms)
-* <a href="#position-comparsion">Position</a>
+* <a href="#position-comparsion">Position</a> (1.019 ms / 77.925 ms)
 * <a href="#position-relative-to-viewport-comparsion">Position Relative To Viewport</a>
 * <a href="#prepend-comparsion">Prepend</a>
 * <a href="#prev-comparsion">Prev</a>
@@ -507,7 +507,7 @@ outerWidth(el);
 $(el).outerWidth(true);
 ```
 ### Parent Comparsion
-Live code at [https://jsfiddle.net/dda467b1/34/](https://jsfiddle.net/dda467b1/34/)
+Live code at [https://jsfiddle.net/dda467b1/35/](https://jsfiddle.net/dda467b1/35/)
 
 `Native JavScript` take about **0.230** milliseconds / `jQuery` take about **4.860** milliseconds.
 ##### `Native JavScript code`
@@ -519,7 +519,17 @@ el.parentNode
 $(el).parent();
 ```
 ### Position Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/36/](https://jsfiddle.net/dda467b1/36/)
+
+`Native JavScript` take about **1.019** milliseconds / `jQuery` take about **77.925** milliseconds.
+##### `Native JavScript code`
+```js
+{left: el.offsetLeft, top: el.offsetTop}
+```
+##### `jQuery code`
+```
+$(el).position();
+```
 ### Position Relative To Viewport Comparsion
 (Updating)
 ### Prepend Comparsion
