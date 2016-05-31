@@ -26,7 +26,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#empty-comparsion">Empty</a> (1.969 ms / 3.639 ms)
 * <a href="#filter-comparsion">Filter</a> (2.709 ms / 9.860 ms)
 * <a href="#find-children-comparsion">Find Children</a> (0.949 ms / 5.404 ms)
-* <a href="#find-elements-comparsion">Find Elements</a>
+* <a href="#find-elements-comparsion">Find Elements</a> (0.970 ms / 12.250 ms)
 * <a href="#get-attributes-comparsion">Get Attributes</a>
 * <a href="#get-html-comparsion">Get Html</a>
 * <a href="#get-outer-html-comparsion">Get Outer Html</a>
@@ -292,7 +292,17 @@ el.querySelectorAll(selector);
 $(el).find(selector);
 ```
 ### Find Elements Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/17/](https://jsfiddle.net/dda467b1/17/)
+
+`Native JavScript` take about **0.970** milliseconds / `jQuery` take about **12.250** milliseconds.
+##### `Native JavScript code`
+```js
+document.querySelectorAll('.my #awesome selector');
+```
+##### `jQuery code`
+```
+$('.my #awesome selector');
+```
 ### Get Attributes Comparsion
 (Updating)
 ### Get Html Comparsion
