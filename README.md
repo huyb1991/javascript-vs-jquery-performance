@@ -38,7 +38,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#next-comparsion">Next</a> (0.215 ms / 1.130 ms)
 * <a href="#offset-comparsion">Offset</a> (2.470 ms / 7.034 ms)
 * <a href="#offset-parent-comparsion">Offset Parent</a> (1.045 ms / 21.250 ms)
-* <a href="#outer-height-comparsion">Outer Height</a>
+* <a href="#outer-height-comparsion">Outer Height</a> (0.714 ms / 19.774 ms)
 * <a href="#outer-height-with-margin-comparsion">Outer Height With Margin</a>
 * <a href="#outer-width-comparsion">Outer Width</a>
 * <a href="#outer-width-with-margin-comparsion">Outer Width With Margin</a>
@@ -431,7 +431,7 @@ var rect = el.getBoundingClientRect();
 $(el).offset();
 ```
 ### Offset Parent Comparsion
-Live code at [https://jsfiddle.net/dda467b1/28/](https://jsfiddle.net/dda467b1/28/)
+Live code at [https://jsfiddle.net/dda467b1/29/](https://jsfiddle.net/dda467b1/29/)
 
 `Native JavScript` take about **1.045** milliseconds / `jQuery` take about **21.250** milliseconds.
 ##### `Native JavScript code`
@@ -443,7 +443,17 @@ el.offsetParent || el
 $(el).offsetParent();
 ```
 ### Outer Height Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/30/](https://jsfiddle.net/dda467b1/30/)
+
+`Native JavScript` take about **0.714** milliseconds / `jQuery` take about **19.774** milliseconds.
+##### `Native JavScript code`
+```js
+el.offsetHeight
+```
+##### `jQuery code`
+```
+$(el).outerHeight();
+```
 ### Outer Height With Margin Comparsion
 (Updating)
 ### Outer Width Comparsion
