@@ -55,7 +55,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#set-style-comparsion">Set Style</a> (2.425 ms / 21.509 ms)
 * <a href="#set-text-comparsion">Set Text</a> (0.900 ms / 11.405 ms)
 * <a href="#siblings-comparsion">Siblings</a> (11.504 ms / 8.060 ms)
-* <a href="#toggle-class-comparsion">Toggle Class</a>
+* <a href="#toggle-class-comparsion">Toggle Class</a> (1.169 ms / 29.754 ms)
 
 ### Events
 * <a href="#off-comparsion">Off</a>
@@ -660,7 +660,7 @@ el.textContent = string;
 $(el).text(string);
 ```
 ### Siblings Comparsion
-Live code at [https://jsfiddle.net/dda467b1/47/](https://jsfiddle.net/dda477b1/46/)
+Live code at [https://jsfiddle.net/dda467b1/47/](https://jsfiddle.net/dda467b1/47/)
 
 `Native JavScript` take about **11.504** milliseconds / `jQuery` take about **8.060** milliseconds.
 ##### `Native JavScript code`
@@ -674,7 +674,29 @@ Array.prototype.filter.call(el.parentNode.children, function(child){
 $(el).siblings();
 ```
 ### Toggle Class Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/48/](https://jsfiddle.net/dda467b1/48/)
+
+`Native JavScript` take about **1.169** milliseconds / `jQuery` take about **29.754** milliseconds.
+##### `Native JavScript code`
+```js
+if (el.classList) {
+  el.classList.toggle(className);
+} else {
+  var classes = el.className.split(' ');
+  var existingIndex = classes.indexOf(className);
+
+  if (existingIndex >= 0)
+    classes.splice(existingIndex, 1);
+  else
+    classes.push(className);
+
+  el.className = classes.join(' ');
+}
+```
+##### `jQuery code`
+```
+$(el).toggleClass(className);
+```
 ## EVENTS Comparsion
 ### Off Comparsion
 (Updating)
