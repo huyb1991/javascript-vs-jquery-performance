@@ -70,7 +70,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#deep-extend-comparsion">Deep Extend</a> (1.105 ms/ 2.869 ms)
 * <a href="#extend-comparsion">Extend</a> (0.674 ms / 2.084 ms)
 * <a href="#index-of-comparsion">Index Of</a> (0.174 ms / 0.330 ms)
-* <a href="#is-array-comparsion">Is Array</a>
+* <a href="#is-array-comparsion">Is Array</a> (0.299 ms / 0.349 ms)
 * <a href="#map-comparsion">Map</a>
 * <a href="#now-comparsion">Now</a>
 * <a href="#parse-html-comparsion">Parse Html</a>
@@ -866,7 +866,17 @@ array.indexOf(item);
 $.inArray(item, array);
 ```
 ### Is Array Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/59/](https://jsfiddle.net/dda467b1/59/)
+
+`Native JavScript` take about **0.299** milliseconds / `jQuery` take about **0.349** milliseconds.
+##### `Native JavScript code`
+```js
+Array.isArray(arr);
+```
+##### `jQuery code`
+```
+$.isArray(arr);
+```
 ### Map Comparsion
 (Updating)
 ### Now Comparsion
