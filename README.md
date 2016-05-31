@@ -54,7 +54,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#set-html-comparsion">Set Html</a> (2.225 ms / 9.705 ms)
 * <a href="#set-style-comparsion">Set Style</a> (2.425 ms / 21.509 ms)
 * <a href="#set-text-comparsion">Set Text</a> (0.900 ms / 11.405 ms)
-* <a href="#siblings-comparsion">Siblings</a>
+* <a href="#siblings-comparsion">Siblings</a> (11.504 ms / 8.060 ms)
 * <a href="#toggle-class-comparsion">Toggle Class</a>
 
 ### Events
@@ -660,7 +660,19 @@ el.textContent = string;
 $(el).text(string);
 ```
 ### Siblings Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/47/](https://jsfiddle.net/dda477b1/46/)
+
+`Native JavScript` take about **11.504** milliseconds / `jQuery` take about **8.060** milliseconds.
+##### `Native JavScript code`
+```js
+Array.prototype.filter.call(el.parentNode.children, function(child){
+  return child !== el;
+});
+```
+##### `jQuery code`
+```
+$(el).siblings();
+```
 ### Toggle Class Comparsion
 (Updating)
 ## EVENTS Comparsion
