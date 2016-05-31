@@ -68,7 +68,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#bind-comparsion">Bind</a>
 * <a href="#array-each-comparsion">Array Each</a> (0.575 ms / 1.094 ms)
 * <a href="#deep-extend-comparsion">Deep Extend</a> (1.105 ms/ 2.869 ms)
-* <a href="#extend-comparsion">Extend</a>
+* <a href="#extend-comparsion">Extend</a> (0.674 ms / 2.084 ms)
 * <a href="#index-of-comparsion">Index Of</a>
 * <a href="#is-array-comparsion">Is Array</a>
 * <a href="#map-comparsion">Map</a>
@@ -826,7 +826,33 @@ deepExtend({}, objA, objB);
 $.extend(true, {}, objA, objB);
 ```
 ### Extend Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/57/](https://jsfiddle.net/dda467b1/57/)
+
+`Native JavScript` take about **0.674** milliseconds / `jQuery` take about **2.084** milliseconds.
+##### `Native JavScript code`
+```js
+var extend = function(out) {
+  out = out || {};
+
+  for (var i = 1; i < arguments.length; i++) {
+    if (!arguments[i])
+      continue;
+
+    for (var key in arguments[i]) {
+      if (arguments[i].hasOwnProperty(key))
+        out[key] = arguments[i][key];
+    }
+  }
+
+  return out;
+};
+
+extend({}, objA, objB);
+```
+##### `jQuery code`
+```
+$.extend({}, objA, objB);
+```
 ### Index Of Comparsion
 (Updating)
 ### Is Array Comparsion
