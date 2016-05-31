@@ -40,7 +40,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#offset-parent-comparsion">Offset Parent</a> (1.045 ms / 21.250 ms)
 * <a href="#outer-height-comparsion">Outer Height</a> (0.714 ms / 19.774 ms)
 * <a href="#outer-height-with-margin-comparsion">Outer Height With Margin</a> (5.360 ms / 26.779 ms)
-* <a href="#outer-width-comparsion">Outer Width</a>
+* <a href="#outer-width-comparsion">Outer Width</a> (3.125 ms / 19.805 ms)
 * <a href="#outer-width-with-margin-comparsion">Outer Width With Margin</a>
 * <a href="#parent-comparsion">Parent</a>
 * <a href="#position-comparsion">Position</a>
@@ -475,7 +475,17 @@ outerHeight(el);
 $(el).outerHeight(true);
 ```
 ### Outer Width Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/32/](https://jsfiddle.net/dda467b1/32/)
+
+`Native JavScript` take about **3.125** milliseconds / `jQuery` take about **19.805** milliseconds.
+##### `Native JavScript code`
+```js
+el.offsetWidth
+```
+##### `jQuery code`
+```
+$(el).outerWidth();
+```
 ### Outer Width With Margin Comparsion
 (Updating)
 ### Parent Comparsion
