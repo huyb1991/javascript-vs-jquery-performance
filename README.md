@@ -4,6 +4,8 @@ Performance comparsion of **`native JavaScript`** and **`jQuery (version 2.1.0)`
 The numbers at the right of links are the result of execute time with the same function for **1,000** loops of `Native JavaScript / jQuery`.
 ## Index
 ### Ajax
+Ajax request only for 10 loops
+
 * <a href="#json-comparsion">JSON</a> (1.039 ms / 11.025 ms)
 * <a href="#post-comparsion">Post</a> (5.765 ms / 17.940 ms)
 * <a href="#request-comparsion">Request</a> (2.095 ms / 12.439 ms)
