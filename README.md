@@ -44,7 +44,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#outer-width-with-margin-comparsion">Outer Width With Margin</a> (2.490 ms / 27.835 ms)
 * <a href="#parent-comparsion">Parent</a> (0.230 ms / 4.860 ms)
 * <a href="#position-comparsion">Position</a> (1.019 ms / 77.925 ms)
-* <a href="#position-relative-to-viewport-comparsion">Position Relative To Viewport</a>
+* <a href="#position-relative-to-viewport-comparsion">Position Relative To Viewport</a> (1.549 ms / 10.710 ms)
 * <a href="#prepend-comparsion">Prepend</a>
 * <a href="#prev-comparsion">Prev</a>
 * <a href="#remove-comparsion">Remove</a>
@@ -531,7 +531,22 @@ Live code at [https://jsfiddle.net/dda467b1/36/](https://jsfiddle.net/dda467b1/3
 $(el).position();
 ```
 ### Position Relative To Viewport Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/38/](https://jsfiddle.net/dda467b1/38/)
+
+`Native JavScript` take about **1.549** milliseconds / `jQuery` take about **10.710** milliseconds.
+##### `Native JavScript code`
+```js
+el.getBoundingClientRect()
+```
+##### `jQuery code`
+```
+var offset = el.offset();
+
+{
+  top: offset.top - document.body.scrollTop,
+  left: offset.left - document.body.scrollLeft
+}
+```
 ### Prepend Comparsion
 (Updating)
 ### Prev Comparsion
