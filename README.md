@@ -67,7 +67,7 @@ The numbers at the right of links are the result of execute time with the same f
 ### Utils
 * <a href="#bind-comparsion">Bind</a>
 * <a href="#array-each-comparsion">Array Each</a> (0.575 ms / 1.094 ms)
-* <a href="#deep-extend-comparsion">Deep Extend</a>
+* <a href="#deep-extend-comparsion">Deep Extend</a> (1.105 ms/ 2.869 ms)
 * <a href="#extend-comparsion">Extend</a>
 * <a href="#index-of-comparsion">Index Of</a>
 * <a href="#is-array-comparsion">Is Array</a>
@@ -778,7 +778,7 @@ $(el).trigger('change');
 ### Bind Comparsion
 (Updating)
 ### Array Each Comparsion
-Live code at [https://jsfiddle.net/dda467b1/55/](https://jsfiddle.net/dda467b1/55/)
+Live code at [https://jsfiddle.net/dda467b1/56/](https://jsfiddle.net/dda467b1/56/)
 
 `Native JavScript` take about **0.575** milliseconds / `jQuery` take about **1.094** milliseconds.
 ##### `Native JavScript code`
@@ -792,7 +792,39 @@ $.each(array, function(i, item){
 });
 ```
 ### Deep Extend Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/55/](https://jsfiddle.net/dda467b1/55/)
+
+`Native JavScript` take about **1.105** milliseconds / `jQuery` take about **2.869** milliseconds.
+##### `Native JavScript code`
+```js
+var deepExtend = function(out) {
+  out = out || {};
+
+  for (var i = 1; i < arguments.length; i++) {
+    var obj = arguments[i];
+
+    if (!obj)
+      continue;
+
+    for (var key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        if (typeof obj[key] === 'object')
+          out[key] = deepExtend(out[key], obj[key]);
+        else
+          out[key] = obj[key];
+      }
+    }
+  }
+
+  return out;
+};
+
+deepExtend({}, objA, objB);
+```
+##### `jQuery code`
+```
+$.extend(true, {}, objA, objB);
+```
 ### Extend Comparsion
 (Updating)
 ### Index Of Comparsion
