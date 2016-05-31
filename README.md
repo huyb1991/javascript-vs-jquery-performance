@@ -33,7 +33,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#get-style-comparsion">Get Style</a> (1.424 ms / 11.745 ms)
 * <a href="#get-text-comparsion">Get Text</a> (0.320 ms / 2.470 ms)
 * <a href="#has-class-comparsion">Has Class</a> (0.480 ms / 2.689 ms)
-* <a href="#matches-comparsion">Matches</a>
+* <a href="#matches-comparsion">Matches</a> (0.345 ms / 6.534 ms)
 * <a href="#matches-selector-comparsion">Matches Selector</a>
 * <a href="#next-comparsion">Next</a>
 * <a href="#offset-comparsion">Offset</a>
@@ -379,7 +379,17 @@ else
 $(el).hasClass(className);
 ```
 ### Matches Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/24/](https://jsfiddle.net/dda467b1/24/)
+
+`Native JavScript` take about **0.345** milliseconds / `jQuery` take about **6.534** milliseconds.
+##### `Native JavScript code`
+```js
+el === otherEl
+```
+##### `jQuery code`
+```
+$(el).is($(otherEl));
+```
 ### Matches Selector Comparsion
 (Updating)
 ### Next Comparsion
