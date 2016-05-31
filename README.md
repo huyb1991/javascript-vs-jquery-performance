@@ -76,7 +76,7 @@ The numbers at the right of links are the result of execute time with the same f
 * <a href="#parse-html-comparsion">Parse Html</a> (29.465 ms / 51.220 ms)
 * <a href="#parse-json-comparsion">Parse Json</a> (0.605 ms / 1.460 ms)
 * <a href="#trim-comparsion">Trim</a> (0.200 ms/ 0.279 ms)
-* <a href="#type-comparsion">Type</a>
+* <a href="#type-comparsion">Type</a> (1.610 ms / 0.210 ms)
 
 ## AJAX Comparsion
 ### JSON Comparsion
@@ -946,4 +946,14 @@ string.trim();
 $.trim(string);
 ```
 ### Type Comparsion
-(Updating)
+Live code at [https://jsfiddle.net/dda467b1/68/](https://jsfiddle.net/dda468b1/67/)
+
+`Native JavScript` take about **1.610** milliseconds / `jQuery` take about **0.210** milliseconds.
+##### `Native JavScript code`
+```js
+Object.prototype.toString.call(obj).replace(/^\[object (.+)\]$/, '$1').toLowerCase();
+```
+##### `jQuery code`
+```
+$.type(obj);
+```
